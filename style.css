@@ -567,9 +567,12 @@ section {
         font-size: 12px;
         display: flex;
         justify-content: center;
-        padding:30px 0px;
+        padding:30px 55px;
         position: relative;
       }
+    .social-links{
+        gap: 0rem;
+    }
 }
 /* Hide dropdown on larger screens */
 @media (min-width: 768px) {
