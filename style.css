@@ -216,6 +216,10 @@ p {
 }
 
 /* Download Button */
+.btn {
+    margin-bottom: 2rem;
+  }
+
 .btn button {
     padding: 10px 25px;
     margin-top: 15px;
@@ -334,7 +338,36 @@ body {
     color: white;
 }
 
-/* Hamburger Icon */
+
+.hamburg {
+    font-size: 24px;
+    cursor: pointer;
+    display: block;
+}
+
+/* Dropdown menu (mobile) */
+.dropdown {
+    display: none;
+    flex-direction: column;
+    background-color: #444;
+    padding: 15px;
+}
+
+.dropdown .link a {
+    display: block;
+    color: white;
+    padding: 10px 0;
+    text-decoration: none;
+}
+
+/* Cancel icon inside dropdown */
+.dropdown .cancel {
+    align-self: flex-end;
+    font-size: 24px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+/* Hamburger Icon
 .cancel {
     position: absolute;
     top: 20px;
@@ -351,7 +384,7 @@ body {
 }
 
 /* Dropdown Menu */
-.dropdown {
+/* .dropdown {
     position: fixed;
     top: 0;
     right: 0;
@@ -368,12 +401,27 @@ body {
     box-shadow: -4px 0 10px rgba(0, 0, 0, 0.2);
     z-index: 1000;
     overflow: hidden
-}
+} */
 
 
 /* Dropdown active when menu open */
 .dropdown.active {
-    width: 30%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 43%;
+    height: 100vh;
+    background-color: white;
+    overflow-x: hidden;
+    overflow-y: auto;
+    transition: width 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 80px;
+    box-shadow: -4px 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    overflow: hidden
 }
 
 /* Dropdown Links */
@@ -385,16 +433,17 @@ body {
 }
 
 .dropdown .link a {
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     color: rgb(109, 67, 0);
-    text-decoration: none;
+    text-decoration:none;
     font-weight: 500;
-    transition: color 0.3s ease;
-}
+    transition:color 0.3s ease;
+    padding:9px;
+  }
 
 .dropdown .link a:hover {
     color: black;
-}
+} */
 
 /* Main Section */
 section {
@@ -536,7 +585,7 @@ section {
         flex-direction: column;
         text-align: center;
     }
-
+/* 
     .dropdown {
         display: flex;
         width: 11rem;
@@ -546,7 +595,7 @@ section {
         display: block;
         padding: 10px 0;
         font-size: 1.2rem;
-    }
+    } */
 
     .image img{
         margin-top: 35rem;
@@ -589,18 +638,15 @@ section {
         padding:30px 0px;
         position: relative;
       }
-
+}
 /* Hide dropdown on larger screens */
-@media (min-width: 769px) {
-
-    .dropdown,
-    .hamburg {
-        display: none !important;
+@media (min-width: 768px) {
+    .links {
+        display: flex !important;
     }
-}
-}
-@media (min-width:10px) {
-    .dropdown, .fa-solid.fa-bars.hamburg{
-        display: none;
+
+    .hamburg,
+    .dropdown {
+        display: none !important;
     }
 }
