@@ -82,8 +82,9 @@ body {
 
 
 /* Hamburger Icon */
-.hamburg,
-.cancel {
+
+/* Hamburger & Cancel Icons */
+.hamburg, .cancel {
     cursor: pointer;
     position: absolute;
     right: 20px;
@@ -91,24 +92,58 @@ body {
     font-size: 2rem;
     color: black;
     display: none;
-}
-
-/* Dropdown Menu */
-.dropdown {
+  }
+  
+  .hamburg {
+    display: block;
+  }
+  
+  /* Dropdown Menu */
+  .dropdown {
     display: none;
     flex-direction: column;
-    background-color: white;
-    width: 100%;
-    padding: 20px;
-    position: absolute;
-    top: 10vh;
-    left: 0;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.dropdown .link {
-    margin-bottom: 15px;
-}
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 70%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.85);
+    padding: 2rem;
+    z-index: 1000;
+    transition: transform 0.3s ease;
+  }
+  
+  .dropdown.active {
+    display: flex;
+  }
+  
+  .dropdown .link {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: flex-start;
+    margin-top: 2rem;
+  }
+  
+  .dropdown .link a {
+    font-size: 1.2rem;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    padding: 0.5rem 0;
+  }
+  
+  .dropdown .link a:hover {
+    color: #fed7ad;
+  }
+  
+  .dropdown .cancel {
+    align-self: flex-end;
+    font-size: 1.8rem;
+    color: white;
+    cursor: pointer;
+  }
 
 /* Main Section */
 section {
@@ -263,112 +298,6 @@ p {
 .link a:hover::before {
     width: 100%;
 }
-
-.hamburg {
-    font-size: 24px;
-    cursor: pointer;
-    display: block;
-}
-
-/* Dropdown menu (mobile) */
-.dropdown {
-    display: none;
-    flex-direction: column;
-    background-color: #444;
-    padding: 15px;
-}
-
-.dropdown .link a {
-    display: block;
-    color: white;
-    padding: 10px 0;
-    text-decoration: none;
-}
-
-/* Cancel icon inside dropdown */
-.dropdown .cancel {
-    align-self: flex-end;
-    font-size: 24px;
-    cursor: pointer;
-    margin-top: 10px;
-}
-/* Hamburger Icon
-.cancel {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    font-size: 2rem;
-    color: black;
-    cursor: pointer;
-    display: none;
-}
-
-/* Hamburger Icon */
-.hamburg {
-    display: none;
-}
-
-/* Dropdown Menu */
-/* .dropdown {
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 0;
-    height: 100vh;
-    background-color: white;
-    overflow-x: hidden;
-    overflow-y: auto;
-    transition: width 0.4s ease;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 80px;
-    box-shadow: -4px 0 10px rgba(0, 0, 0, 0.2);
-    z-index: 1000;
-    overflow: hidden
-} */
-
-
-/* Dropdown active when menu open */
-.dropdown.active {
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 43%;
-    height: 100vh;
-    background-color: white;
-    overflow-x: hidden;
-    overflow-y: auto;
-    transition: width 0.4s ease;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 80px;
-    box-shadow: -4px 0 10px rgba(0, 0, 0, 0.2);
-    z-index: 1000;
-    overflow: hidden
-}
-
-/* Dropdown Links */
-.dropdown .link {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    align-items: center;
-}
-
-.dropdown .link a {
-    font-size: 1.1rem;
-    color: rgb(109, 67, 0);
-    text-decoration:none;
-    font-weight: 500;
-    transition:color 0.3s ease;
-    padding:9px;
-  }
-
-.dropdown .link a:hover {
-    color: black;
-} */
 
 /* Main Section */
 section {
